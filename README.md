@@ -24,7 +24,6 @@ docker-compose up -d tester_task1  # will generate task1.log
 docker-compose up -d tester_task2  # will generate task2.log
 
 You can also do
-```bash
 docker-compose run -it it-debug 
 to interactively run the scripts.
 
