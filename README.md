@@ -11,7 +11,7 @@ Download checkpoints from:
 Put the folders under `./checkpoints`.  
 
 ---
-###🧬 Conda
+### 🧬 Conda
 
 Please refer to requirements.txt to set up your conda environment.
 Then refer to docker-compose.yaml to run the corresponding file under your conda environment.
