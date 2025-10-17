@@ -23,7 +23,7 @@ docker-compose build
 docker-compose up -d tester_task1  # will generate task1.log
 docker-compose up -d tester_task2  # will generate task2.log
 
-docker-compose run -it it-debug  #You can also do to interactively run the scripts.
+docker-compose run -it it-debug  #This is for interactively run the scripts.
 
 
 Conda:
