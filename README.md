@@ -11,6 +11,10 @@ Download checkpoints from:
 Put the folders under `./checkpoints`.  
 
 ---
+###🧬 Conda
+
+Please refer to requirements.txt to set up your conda environment.
+Then refer to docker-compose.yaml to run the corresponding file under your conda environment.
 
 ### 🐳 Docker
 
@@ -26,11 +30,7 @@ docker-compose up -d tester_task2  # will generate task2.log
 docker-compose run -it it-debug  #This is for interactively run the scripts.
 
 
-🧬 Conda
 
-Please refer to requirements.txt to set up your conda environment.
-
-Then refer to docker-compose.yaml to run the corresponding file under your conda environment.
 
 
 
