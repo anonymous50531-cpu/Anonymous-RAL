@@ -1,0 +1,43 @@
+version: "3.9"
+
+services:
+  it-debug:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    shm_size: "8g"
+    volumes:
+      - .:/workspace
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    working_dir: /workspace
+    container_name: gangyan_accelerate_gpu_debug
+  
+  tester_task1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    shm_size: "8g"
+    volumes:
+      - .:/workspace
+    runtime: nvidia
+    working_dir: /workspace
+    container_name: tester_task1
+    command: >
+      sh -c "accelerate launch --config-file default_config.yaml main.py > ./task1.log 2>&1"
+
+  tester_task2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    shm_size: "8g"
+    volumes:
+      - .:/workspace
+    runtime: nvidia
+    working_dir: /workspace
+    container_name: tester_task2
+    command: >
+      sh -c "accelerate launch --config-file default_config.yaml main_task2.py > ./task2.log 2>&1"
+  
+  
